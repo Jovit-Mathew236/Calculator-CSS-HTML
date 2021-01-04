@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
     <title>Calculator</title>
 </head>
 <body>
@@ -12,7 +14,7 @@
             <input type="text" readonly class="value" name="txt">
             <span class="num clear" onclick="calc.txt.value = ''">C</span>
             <span class="num" onclick="document.calc.txt.value +='/'">/</span>
-            <span class="num" onclick="document.calc.txt.value +='*'">x</span>
+            <span class="num" onclick="document.calc.txt.value +='*'">*</span>
             <span class="num" onclick="document.calc.txt.value +='7'">7</span>
             <span class="num" onclick="document.calc.txt.value +='8'">8</span>
             <span class="num" onclick="document.calc.txt.value +='9'">9</span>
@@ -28,6 +30,7 @@
             <span class="num" onclick="document.calc.txt.value +='00'">00</span>
             <span class="num" onclick="document.calc.txt.value +='.'">.</span>
             <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+            <span class="num" onclick="document.calc.txt.value = document.calc.txt.value.substr(0,document.calc.txt.value.length-1)"><i class="material-icons">backspace</i></span>
         </form>
     </div>
 </body>
